@@ -43,7 +43,7 @@ const Login = () => {
       <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8">
    
         <div className="flex justify-center mb-4">
-            <img className="h-20" src="../logo1.png" alt="logo"/>
+            <img className="h-20" src="/logo1.png" alt="logo"/>
         </div>
 
      
