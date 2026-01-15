@@ -9,7 +9,7 @@ import roleMiddleware from "../middleware/roleMiddleware.js";
 
 const router = express.Router();
 
-// Employee routes
+
 router.post(
   "/",
   authMiddleware,
@@ -24,7 +24,7 @@ router.get(
   getMyAttendance
 );
 
-// Admin route
+
 router.get(
   "/",
   authMiddleware,

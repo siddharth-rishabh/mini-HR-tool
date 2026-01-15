@@ -68,7 +68,6 @@ export const cancelLeave = async (req, res) => {
   }
 };
 
-// 4️⃣ ADMIN: APPROVE / REJECT
 export const updateLeaveStatus = async (req, res) => {
   try {
     const { status } = req.body;

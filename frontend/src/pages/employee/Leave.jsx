@@ -21,7 +21,6 @@ const Leave = () => {
     loadLeaves();
   }, []);
 
-  // 🔹 Reusable reload function for actions
   const reloadLeaves = async () => {
     const res = await api.get("/leave/me");
     setLeaves(res.data);

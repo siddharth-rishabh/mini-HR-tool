@@ -1,6 +1,5 @@
 import Attendance from "../models/Attendance.js";
 
-// 1️⃣ MARK ATTENDANCE (Employee)
 export const markAttendance = async (req, res) => {
   try {
     const { status } = req.body;
@@ -9,7 +8,6 @@ export const markAttendance = async (req, res) => {
       return res.status(400).json({ message: "Invalid attendance status" });
     }
 
-    // Normalize date (start of today)
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
@@ -21,7 +19,7 @@ export const markAttendance = async (req, res) => {
 
     res.status(201).json(attendance);
   } catch (error) {
-    // Duplicate attendance (unique index)
+
     if (error.code === 11000) {
       return res
         .status(400)
@@ -32,7 +30,6 @@ export const markAttendance = async (req, res) => {
   }
 };
 
-// 2️⃣ GET MY ATTENDANCE (Employee)
 export const getMyAttendance = async (req, res) => {
   try {
     const records = await Attendance.find({
@@ -45,7 +42,6 @@ export const getMyAttendance = async (req, res) => {
   }
 };
 
-// 3️⃣ GET ALL ATTENDANCE (Admin)
 export const getAllAttendance = async (req, res) => {
   try {
     const records = await Attendance.find()

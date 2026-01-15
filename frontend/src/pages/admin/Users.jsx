@@ -5,7 +5,6 @@ import Navbar from "../../components/Navbar";
 const Users = () => {
   const [users, setUsers] = useState([]);
 
-  // 🔹 Initial load
   useEffect(() => {
     const loadUsers = async () => {
       try {
